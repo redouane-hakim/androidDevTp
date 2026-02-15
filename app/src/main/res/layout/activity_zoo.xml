@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Activity_Zoo">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/img_eleph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_eleph"
+        app:layout_constraintVertical_bias="0.401"
+        app:srcCompat="@drawable/zoobg" />
+
+    <ImageView
+        android:id="@+id/img_cat"
+        android:layout_width="0dp"
+        android:layout_height="140sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="#D3F2EAEA"
+        app:layout_constraintBottom_toTopOf="@+id/img_mouton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_dog"
+        app:srcCompat="@drawable/cat" />
+
+    <ImageView
+        android:id="@+id/img_dog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="165dp"
+        android:background="#E5F6F3F3"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/img_cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_instruct"
+        app:srcCompat="@drawable/dog" />
+
+    <ImageView
+        android:id="@+id/img_tiger"
+        android:layout_width="0dp"
+        android:layout_height="140sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="32dp"
+        android:background="#49F6F1F1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/img_rhino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tiger" />
+
+    <ImageView
+        android:id="@+id/img_rhino"
+        android:layout_width="0dp"
+        android:layout_height="140sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="#74E6DCDC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_tiger"
+        app:srcCompat="@drawable/rhino" />
+
+    <ImageView
+        android:id="@+id/img_mouton"
+        android:layout_width="0dp"
+        android:layout_height="160sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="#C9E4DEDE"
+        app:layout_constraintBottom_toTopOf="@+id/img_rhino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_eleph"
+        app:srcCompat="@drawable/mouton" />
+
+    <ImageView
+        android:id="@+id/img_eleph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="204dp"
+        android:background="#E7F4EBEB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_mouton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/eleph" />
+
+    <TextView
+        android:id="@+id/txt_instruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Taper sur un animal"
+        android:textColor="#FBFDFB"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_dog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titre" />
+
+    <TextView
+        android:id="@+id/txt_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="27dp"
+        android:fontFamily="casual"
+        android:text="ZooMedia"
+        android:textColor="#C5B775"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/txt_instruct"
+        app:layout_constraintStart_toStartOf="@+id/txt_instruct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:background="#56FFFFFF"
+        android:text="RHINOCERUS"
+        android:textColor="#370808"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_rhino"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/img_rhino" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="TIGRE"
+        android:textColor="#370808"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_tiger"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/img_tiger" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="197dp"
+        android:text="ELEPHANT"
+        android:textColor="#370808"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_eleph"
+        app:layout_constraintStart_toStartOf="@+id/img_eleph"
+        app:layout_constraintTop_toBottomOf="@+id/img_dog" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="76dp"
+        android:text="CHIEN"
+        android:textColor="#370808"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_eleph"
+        app:layout_constraintEnd_toEndOf="@+id/img_dog"
+        app:layout_constraintStart_toStartOf="@+id/img_dog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="CHAT"
+        android:textColor="#370808"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cat"
+        app:layout_constraintEnd_toEndOf="@+id/img_cat"
+        app:layout_constraintStart_toStartOf="@+id/img_cat" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="MOUTON"
+        android:textColor="#370808"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_mouton"
+        app:layout_constraintEnd_toEndOf="@+id/img_mouton"
+        app:layout_constraintStart_toStartOf="@+id/img_mouton" />
+
+    <Button
+        android:id="@+id/btn_retour"
+        android:layout_width="90dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="#00FFFFFF"
+        android:padding="0sp"
+        android:text="."
+        app:cornerRadius="90sp"
+        app:icon="@drawable/retour"
+        app:iconPadding="0dp"
+        app:iconSize="90dp"
+        app:iconTint="#FF9122"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#696A1E"
+        app:strokeWidth="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

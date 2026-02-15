@@ -1,5 +1,6 @@
 package com.example.androiddev;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    Button retour;
     Button add;
     Button minus;
     Button multiply;
@@ -30,6 +32,8 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
+
+        retour = findViewById(R.id.retour);
         add = findViewById(R.id.add);
         minus  = findViewById(R.id.minus);
         multiply = findViewById(R.id.multiply);
@@ -91,6 +95,15 @@ public class MainActivity2 extends AppCompatActivity {
                 txt1.setText("");
                 txt2.setText("");
                 res.setText("");
+            }
+        });
+
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this , Main1.class);
+                startActivity(intent);
+                finish();
             }
         });
 

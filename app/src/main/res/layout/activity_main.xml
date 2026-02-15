@@ -26,6 +26,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="81dp"
+        android:hint="length of the word"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,15 +34,17 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/t2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="367dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/t3"
+        android:layout_marginBottom="151dp"
+        android:hint="copied word"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn" />
+        app:layout_constraintTop_toBottomOf="@+id/retour" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/t1"
@@ -51,6 +54,7 @@
         android:layout_marginTop="276dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="64dp"
+        android:hint="insert a word"
         app:layout_constraintBottom_toTopOf="@+id/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,5 +70,18 @@
         app:layout_constraintBottom_toTopOf="@+id/t2"
         app:layout_constraintStart_toStartOf="@+id/t1"
         app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="473dp"
+        android:text="retour"
+        app:layout_constraintBottom_toTopOf="@+id/t2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
