@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="5sp"
+        android:paddingBottom="12dp"
+        android:text="Vibration Demo"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="1dp"
+        android:text="Duration: 200 ms"
+        app:layout_constraintBottom_toTopOf="@+id/sbDuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+    <SeekBar
+        android:id="@+id/sbDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:max="2000"
+        app:layout_constraintBottom_toTopOf="@+id/tvAmplitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDuration" />
+
+    <TextView
+        android:id="@+id/tvAmplitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="Amplitude: 180 (1–255)"
+        app:layout_constraintBottom_toTopOf="@+id/sbAmplitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbDuration" />
+
+    <SeekBar
+        android:id="@+id/sbAmplitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:max="255"
+        app:layout_constraintBottom_toTopOf="@+id/tvOnOff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmplitude" />
+
+    <TextView
+        android:id="@+id/tvOnOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="Pattern: ON 80 ms / OFF 120 ms"
+        app:layout_constraintBottom_toTopOf="@+id/sbOn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbAmplitude" />
+
+    <SeekBar
+        android:id="@+id/sbOn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:max="500"
+        app:layout_constraintBottom_toTopOf="@+id/sbOff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnOff" />
+
+    <SeekBar
+        android:id="@+id/sbOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:max="500"
+        app:layout_constraintBottom_toTopOf="@+id/tvRepeats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbOn" />
+
+    <TextView
+        android:id="@+id/tvRepeats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="18dp"
+        android:text="Repeats: 4"
+        app:layout_constraintBottom_toTopOf="@+id/btnOneShot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbOff" />
+
+    <SeekBar
+        android:id="@+id/sbRepeats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="5sp"
+        android:max="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepeats" />
+
+    <Button
+        android:id="@+id/btnOneShot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="Vibrate (One Shot)"
+        app:layout_constraintBottom_toTopOf="@+id/btnPattern"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepeats" />
+
+    <Button
+        android:id="@+id/btnPattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="Vibrate (Pattern / Ratio)"
+        app:layout_constraintBottom_toTopOf="@+id/btnStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOneShot" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="STOP"
+        app:layout_constraintBottom_toTopOf="@+id/btnHapticClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPattern" />
+
+    <Button
+        android:id="@+id/btnHapticClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="UI Haptic Click "
+        app:layout_constraintBottom_toTopOf="@+id/btnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop" />
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="CLICK"
+        app:layout_constraintBottom_toTopOf="@+id/btnTick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHapticClick" />
+
+    <Button
+        android:id="@+id/btnTick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="TICK"
+        app:layout_constraintBottom_toTopOf="@+id/btnHeavyClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClick" />
+
+    <Button
+        android:id="@+id/btnHeavyClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:text="HEAVY_CLICK"
+        app:layout_constraintBottom_toTopOf="@+id/btnMagic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTick" />
+
+    <Button
+        android:id="@+id/btnMagic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="45dp"
+        android:text="MAGIC"
+        app:layout_constraintBottom_toTopOf="@+id/btn_retour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHeavyClick" />
+
+    <Button
+        android:id="@+id/btn_retour"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="153dp"
+        android:backgroundTint="#00FFFFFF"
+        android:padding="0sp"
+        android:text="."
+        app:icon="@drawable/retour"
+        app:iconPadding="0dp"
+        app:iconSize="90dp"
+        app:iconTint="#FF9122"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMagic"
+        app:strokeColor="#696A1E"
+        app:strokeWidth="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.androiddev;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +16,11 @@ public class Main1 extends AppCompatActivity {
     Button btn_act1;
     Button btn_act2;
     Button btn_actChiffre;
-
     Button btn_actZoo;
+    Button btn_actVibration;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class Main1 extends AppCompatActivity {
         btn_act2 = findViewById(R.id.act2);
         btn_actChiffre= findViewById(R.id.act_chiffre);
         btn_actZoo=findViewById(R.id.act_Zoo);
+        btn_actVibration = findViewById(R.id.act_vibration);
 
         btn_act1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +62,14 @@ public class Main1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main1.this , Activity_Zoo.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btn_actVibration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main1.this , Activity_vibration.class);
                 startActivity(intent);
                 finish();
             }
