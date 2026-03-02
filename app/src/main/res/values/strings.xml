@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidDev</string>
+    <string name="title_activity_maps_osm">MapsOsmActivity</string>
 </resources>

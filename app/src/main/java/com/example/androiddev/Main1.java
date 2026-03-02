@@ -19,6 +19,8 @@ public class Main1 extends AppCompatActivity {
     Button btn_actZoo;
     Button btn_actVibration;
 
+    Button btn_listGridSpinner;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +34,7 @@ public class Main1 extends AppCompatActivity {
         btn_actChiffre= findViewById(R.id.act_chiffre);
         btn_actZoo=findViewById(R.id.act_Zoo);
         btn_actVibration = findViewById(R.id.act_vibration);
+        btn_listGridSpinner = findViewById(R.id.act_listGridSpinner);
 
         btn_act1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +77,17 @@ public class Main1 extends AppCompatActivity {
                 finish();
             }
         });
+        btn_listGridSpinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main1.this , Activty_ListGridSpinner.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

@@ -98,7 +98,7 @@ public class Activity_vibration extends AppCompatActivity {
                 if (!canVibrate()) return;
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    // First function (ONESHOT == ONE vibration and thats it)
+                    // First function (ONESHOT == ONE vibration)
                     VibrationEffect effect = VibrationEffect.createOneShot(durationMs, amplitude);
                     vibrator.vibrate(effect);
                 } else {
