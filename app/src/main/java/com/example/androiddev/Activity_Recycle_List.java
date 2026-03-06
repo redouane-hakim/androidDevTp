@@ -19,10 +19,10 @@ public class Activity_Recycle_List extends AppCompatActivity {
     RecyclerView recyclerView;
     Button btnAdd, btnEdit, btnDelete;
 
-    ArrayList<PaysItem> paysList;   // now items, not strings
+    ArrayList<PaysItem> paysList  = new ArrayList<>();
     PaysAdapter adapter;
 
-    // default image until you fill your own list later
+
     private final int DEFAULT_IMG = android.R.drawable.ic_menu_gallery;
 
     @Override
@@ -44,7 +44,7 @@ public class Activity_Recycle_List extends AppCompatActivity {
                 new PaysItem("Maroc", R.drawable.morroco),
                 new PaysItem("Égypte", R.drawable.egypth),
                 new PaysItem("Japon", R.drawable.japon),
-                new PaysItem("Inde", R.drawable.indie)
+                new PaysItem("Indie", R.drawable.indie)
         };
 
         paysList.addAll(Arrays.asList(paysArray));
