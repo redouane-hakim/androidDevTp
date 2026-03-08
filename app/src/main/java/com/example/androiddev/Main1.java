@@ -2,11 +2,17 @@ package com.example.androiddev;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -28,6 +34,13 @@ public class Main1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.main1);
+        if (getSupportActionBar() != null) {
+
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#004D40")));
+
+
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#FFFFFF'>Let's learn dev</font>", Html.FROM_HTML_MODE_LEGACY));
+        }
 
         btn_act1 = findViewById(R.id.act1);
         btn_act2 = findViewById(R.id.act2);
@@ -94,5 +107,22 @@ public class Main1 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.simple_menu , menu);
+        return super.onCreateOptionsMenu(menu);}
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.itemToMap)
+            {
+                Intent iMap = new Intent(getApplicationContext() , MapsOsmActivity.class);
+                startActivity(iMap);
+                finish();
+            }
+        return super.onOptionsItemSelected(item);
     }
 }

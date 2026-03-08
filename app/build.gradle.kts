@@ -50,3 +50,11 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+secrets {
+    // This tells the plugin which properties file to read
+    propertiesFileName = "local.properties"
+
+    // This is the important part!
+    // It maps your local.properties key to a Manifest placeholder
+    defaultPropertiesFileName = "local.properties"
+}

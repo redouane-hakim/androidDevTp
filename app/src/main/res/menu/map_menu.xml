@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_defaut"
+        android:title="Par défaut"
+        app:showAsAction="collapseActionView|withText" />
+
+    <item
+        android:id="@+id/menu_satellite"
+        android:title="SATELLITE"
+        android:visible="true"
+        app:showAsAction="collapseActionView|withText" />
+</menu>

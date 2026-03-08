@@ -1,9 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AndroidDev" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.AndroidDev" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
+    <style name="MyCustomActionBar" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">@color/colorPrimary</item> <item name="displayOptions">showTitle</item>
+        <item name="titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <style name="MyActionBarTitleText" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">@color/white</item> </style>
+
     <style name="Theme.AndroidDev" parent="Base.Theme.AndroidDev" />
+
+
 </resources>
